@@ -40,17 +40,19 @@ getRecipes();
 }, [query]);
 
 return ( < div className="App">
+  <h1 className='title'>Recipe Finder v1</h1>
   < form className='search-form' Submit={getSearch}>
     < label>
       <input className='search-bar' type="text" value={search} onChange={updateSearch} />
       </label> <input className='search-button' type='submit' />
       </form>
-      <div className='recipes'> {
-        recipes.map(recipe => (
-        <Recipe title={ recipe.recipe.label } calories={ Math.round(recipe.recipe.calories)} image={recipe.recipe.image
+      <div className='card-container'>
+ {recipes.map(recipe => (
+        <Recipe title={ recipe.recipe.label } calories={Math.round(recipe.recipe.calories)} image={recipe.recipe.image
           } ingredients={ recipe.recipe.ingredients} />
         ))
-        } </div>
+        } 
+        </div>
       </div> );
       }
       export default App;

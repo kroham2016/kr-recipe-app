@@ -9,15 +9,26 @@ ul {
 
 .search-form {
   min-height: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.search-bar {}
+.search-bar {
+  width: 50%;
+  padding: 10px;
+}
 
+.search-button{
+  padding: 10px 20px;
+}
+.card-container{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
 .card{
   box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.5);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 25px;
 }
 
 .card:hover{
@@ -27,3 +38,4 @@ ul {
 .recipe-box{
   padding: 2px 15px;
 }
+
