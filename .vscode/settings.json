@@ -1,6 +1,5 @@
 {
     "prettier.singleQuote": true,
     "prettier.semi": false,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
+    "editor.defaultFormatter": "HookyQR.beautify"
 }
