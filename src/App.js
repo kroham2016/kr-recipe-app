@@ -1,6 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import Recipe from './Recipe';
 import './App.css';
+import Navbar from './Navbar';
 
 const App = () => {
 
@@ -17,7 +18,6 @@ const App = () => {
     const getRecipes = async () => {
         const response = await fetch(`https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`);
         const data = await response.json();
-        console.log(data.hits);
         setRecipes(data.hits);
     }
 
@@ -33,28 +33,27 @@ const App = () => {
 
     useEffect(() => {
         getRecipes();
-        // eslint-disable-next-line
+    //eslint-disable-next-line
     }, [query]);
 
     return (
-        < div className="App">
-            <h1 className='title'>Recipe Finder v1</h1> 
-            <form className = 'search-form' Submit = {getSearch} >
-                <input className='search-bar' type="text" value={search} onChange={updateSearch} /> 
-                <input className='search-button' type='submit' / >
-            </form> 
-            <div className = 'card-container' > 
-            {recipes.map(recipe => (
-                <Recipe 
-                    title={recipe.recipe.label} 
-                    calories={Math.round(recipe.recipe.calories)} 
-                    image={recipe.recipe.image} 
-                    ingredients={ recipe.recipe.ingredients} 
-                />
-                ))
-            }
+        <>
+        <Navbar getSearch={getSearch} search={search} updateSearch={updateSearch} />
+        <div className="container-fluid">
+            <div className="row">
+                {recipes.map((recipe,i) => (
+                    <Recipe 
+                        title={recipe.recipe.label} 
+                        calories={Math.round(recipe.recipe.calories)} 
+                        image={recipe.recipe.image} 
+                        ingredients={ recipe.recipe.ingredients} 
+                        key={i}
+                    />
+                    ))
+                }
             </div>
-        </div>
+        </div>        
+        </>
     );
 
 }

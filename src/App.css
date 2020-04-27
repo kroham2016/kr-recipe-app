@@ -1,41 +1,7 @@
-.App {
-  text-align: center;
-  min-height: 100vh;
+/* .my-card{
+  border: 3px dotted red;
 }
 
-ul {
-  list-style-type: none;
-}
-
-.search-form {
-  min-height: 10vh;
-}
-
-.search-bar {
-  width: 50%;
-  padding: 10px;
-}
-
-.search-button{
-  padding: 10px 20px;
-}
-.card-container{
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-}
-.card{
-  box-shadow: 2px 2px 5px 2px rgba(0,0,0,0.5);
-  padding: 10px;
-  margin: 10px;
-  border-radius: 25px;
-}
-
-.card:hover{
-  box-shadow: 4px 4px 8px 2px rgba(0,0,0,0.5);
-}
-
-.recipe-box{
-  padding: 2px 15px;
-}
-
+.my-container{
+  border: 3px dotted blue;
+} */
