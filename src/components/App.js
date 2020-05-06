@@ -10,7 +10,7 @@ import Home from './Home/Home';
 
 const App = (props) => {
 
-    //These keys have very limited use, I am not worried about losing them. 
+    //These keys have very limited use, I am not worried about them being stolen. 
     const APP_ID = 'ac09a00e';
     const APP_KEY = '2f10544080da3fb5ebacbeda331044d0';
 

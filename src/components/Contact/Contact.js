@@ -21,7 +21,7 @@ export default function Contact() {
                   <span className='mx-3'>LinkedIn</span>
                 </button>
               </a>
-              <a href="mailto:keon.roham@gmail.com" className='' target='_blank' rel='noopener noreferrer'>
+              <a href="mailto:keon.roham@yahoo.com" className='' target='_blank' rel='noopener noreferrer'>
                 <button type="button" className="btn btn-secondary mx-2" >
                   <i className="fas fa-at"></i>
                   <span className='mx-3'>Email</span>
