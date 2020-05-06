@@ -1,14 +1,16 @@
 import React, {useEffect,useState} from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-
+import { Switch, Route} from 'react-router-dom';
+import {withRouter} from 'react-router';
 import './App.css';
+
 import Navbar from './Navbar/Navbar';
 import Recipes from './Recipes/Recipes';
 import Contact from './Contact/Contact';
 import Home from './Home/Home';
 
-const App = () => {
+const App = (props) => {
 
+    //These keys have very limited use, I am not worried about losing them. 
     const APP_ID = 'ac09a00e';
     const APP_KEY = '2f10544080da3fb5ebacbeda331044d0';
 
@@ -34,6 +36,7 @@ const App = () => {
         e.preventDefault();
         setQuery(search);
         setSearch('');
+        props.history.push('/recipes');
     }
 
     useEffect(() => {
@@ -43,22 +46,20 @@ const App = () => {
     
     return (
         <>
-        <Router>
-            <Navbar getSearch={getSearch} search={search} updateSearch={updateSearch} />
-            <Switch>
-                <Route path='/contact'>
-                    <Contact />
-                </Route>
-                <Route path='/recipes'>
-                    <Recipes recipes={recipes} />
-                </Route>
-                <Route path='/'>
-                    <Home />
-                </Route>
-            </Switch>
-        </Router>
+        <Navbar getSearch={getSearch} search={search} updateSearch={updateSearch} />
+        <Switch>
+            <Route path='/contact'>
+                <Contact />
+            </Route>
+            <Route path='/recipes'>
+                <Recipes recipes={recipes} />
+            </Route>
+            <Route path='/'>
+                <Home />
+            </Route>
+        </Switch>
         </>
     );
 
 }
-export default App;
+export default withRouter(App);

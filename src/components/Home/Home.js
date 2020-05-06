@@ -9,7 +9,7 @@ export default function Home() {
             </div>
             <div className="row">
                 <div className="col-6">
-                    <p className="lead px-5">Search any keyword in the box above to find delicious recipes. Note the API allows a maximum of 5 searches each minute.</p>
+                    <p className="lead px-5">Search any keyword in the box above to find delicious recipes to make. Please note the API allows a maximum of 5 searches each minute.</p>
                 </div>
             </div>
         </div>
