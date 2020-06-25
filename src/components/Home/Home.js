@@ -8,7 +8,7 @@ export default function Home() {
                 <h1 className='display-4 px-5'>What's cookin?</h1>
             </div>
             <div className="row">
-                <div className="col-6">
+                <div className="col-8">
                     <p className="lead px-5">Search any keyword to find delicious recipes. Note: the API allows 5 searches/minute max.</p>
                 </div>
             </div>
