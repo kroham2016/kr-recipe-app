@@ -6,7 +6,7 @@ import logo from './tomatoes.png';
 export default function Navbar({getSearch,search,updateSearch}) {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand" href="#">                 
+            <a className="navbar-brand" href="/">                 
                 <img src={logo} width='250px' alt="" />
             </a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

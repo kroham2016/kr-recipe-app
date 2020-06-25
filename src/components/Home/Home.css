@@ -1,7 +1,17 @@
-.jumbotron {
+.jumbotron-fluid {
     background-color: transparent !important;
     color: white !important;
-    height: 100vh;
     padding: 100px 100px !important;
+    display: flex;
+    align-items: center;
+    height: 90vh;
 
+}
+
+.id1{
+    background-color: red;
+}
+
+.id2{
+    background-color:blue;
 }
